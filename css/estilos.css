@@ -1,0 +1,117 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del contenedor principal */
+#container {
+    display: flex;
+    padding: 1em;
+    background-color: #FFD862;
+    max-width: 1200px;
+    margin: 1em auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Estilos del menú */
+nav {
+    background-color: #4FC3F7;
+    padding: 10px;
+    position: relative;
+}
+
+/* Oculta el checkbox */
+#menu-hamb {
+    display: none;
+}
+
+/* Estilos del icono hamburguesa */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    display: block;
+}
+
+/* Oculta el menú por defecto */
+.menu {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background-color: #4FC3F7;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+.menu li {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: #FFEB3B;
+    color: black;
+    border-radius: 5px;
+}
+/* Cuando el checkbox está activado, muestra el menú */
+#menu-hamb:checked + .menu-icon + .menu {
+    display: flex;
+    flex-direction: column;
+}
+/* estilos index */
+.seccionIndex{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid #F06292;
+    }
+.articuloIndex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+/*este futer puede ir pa todas las paginas eh ojo*/
+footer{
+    padding: 0.5em;
+    border-radius: 15px;
+    border: 5px solid skyblue;
+    background-color: #99D966;
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        position: static;
+        flex-direction: row;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+
+
+
